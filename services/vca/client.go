@@ -18,9 +18,9 @@
 package vca
 
 import (
-	"github.com/baidubce/bce-sdk-go/auth"
-	"github.com/baidubce/bce-sdk-go/bce"
-	"github.com/baidubce/bce-sdk-go/services/vca/api"
+	"github.com/linyuyizhipao/bce-sdk-go/auth"
+	"github.com/linyuyizhipao/bce-sdk-go/bce"
+	"github.com/linyuyizhipao/bce-sdk-go/services/vca/api"
 )
 
 const (

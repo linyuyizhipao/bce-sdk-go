@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/baidubce/bce-sdk-go/bce"
+	"github.com/linyuyizhipao/bce-sdk-go/bce"
 )
 
 // DomainConfig defined a struct for a specified domain's configuration

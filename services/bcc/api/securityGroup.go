@@ -21,8 +21,8 @@ import (
 	"encoding/json"
 	"strconv"
 
-	"github.com/baidubce/bce-sdk-go/bce"
-	"github.com/baidubce/bce-sdk-go/http"
+	"github.com/linyuyizhipao/bce-sdk-go/bce"
+	"github.com/linyuyizhipao/bce-sdk-go/http"
 )
 
 // CreateSecurityGroup - create a security group and related rules

@@ -11,10 +11,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/baidubce/bce-sdk-go/model"
-	"github.com/baidubce/bce-sdk-go/services/eip"
-	"github.com/baidubce/bce-sdk-go/util"
-	"github.com/baidubce/bce-sdk-go/util/log"
+	"github.com/linyuyizhipao/bce-sdk-go/model"
+	"github.com/linyuyizhipao/bce-sdk-go/services/eip"
+	"github.com/linyuyizhipao/bce-sdk-go/util"
+	"github.com/linyuyizhipao/bce-sdk-go/util/log"
 )
 
 var (

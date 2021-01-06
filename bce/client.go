@@ -44,10 +44,10 @@ import (
 	"io/ioutil"
 	"time"
 
-	"github.com/baidubce/bce-sdk-go/auth"
-	"github.com/baidubce/bce-sdk-go/http"
-	"github.com/baidubce/bce-sdk-go/util"
-	"github.com/baidubce/bce-sdk-go/util/log"
+	"github.com/linyuyizhipao/bce-sdk-go/auth"
+	"github.com/linyuyizhipao/bce-sdk-go/http"
+	"github.com/linyuyizhipao/bce-sdk-go/util"
+	"github.com/linyuyizhipao/bce-sdk-go/util/log"
 )
 
 // Client is the general interface which can perform sending request. Different service

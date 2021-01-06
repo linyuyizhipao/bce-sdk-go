@@ -19,9 +19,9 @@ package bbc
 
 import (
 	"encoding/json"
-	"github.com/baidubce/bce-sdk-go/auth"
-	"github.com/baidubce/bce-sdk-go/bce"
-	"github.com/baidubce/bce-sdk-go/services/bcc/api"
+	"github.com/linyuyizhipao/bce-sdk-go/auth"
+	"github.com/linyuyizhipao/bce-sdk-go/bce"
+	"github.com/linyuyizhipao/bce-sdk-go/services/bcc/api"
 )
 
 const DEFAULT_SERVICE_DOMAIN = "bbc." + bce.DEFAULT_REGION + ".baidubce.com"

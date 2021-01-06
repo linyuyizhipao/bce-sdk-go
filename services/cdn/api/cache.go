@@ -4,8 +4,8 @@ import (
 	"errors"
 	"time"
 
-	"github.com/baidubce/bce-sdk-go/bce"
-	"github.com/baidubce/bce-sdk-go/util"
+	"github.com/linyuyizhipao/bce-sdk-go/bce"
+	"github.com/linyuyizhipao/bce-sdk-go/util"
 )
 
 type PurgedId string

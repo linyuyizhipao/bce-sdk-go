@@ -39,7 +39,7 @@ RDS Client是RDS服务的客户端，为开发者与RDS服务进行交互提供�
 
 ```go
 import (
-	"github.com/baidubce/bce-sdk-go/services/rds"
+	"github.com/linyuyizhipao/bce-sdk-go/services/rds"
 )
 
 func main() {
@@ -78,9 +78,9 @@ GO SDK实现了STS服务的接口，用户可以参考如下完整代码，实�
 import (
 	"fmt"
 
-	"github.com/baidubce/bce-sdk-go/auth"         //导入认证模块
-	"github.com/baidubce/bce-sdk-go/services/rds" //导入RDS服务模块
-	"github.com/baidubce/bce-sdk-go/services/sts" //导入STS服务模块
+	"github.com/linyuyizhipao/bce-sdk-go/auth"         //导入认证模块
+	"github.com/linyuyizhipao/bce-sdk-go/services/rds" //导入RDS服务模块
+	"github.com/linyuyizhipao/bce-sdk-go/services/sts" //导入STS服务模块
 )
 
 func main() {
@@ -132,7 +132,7 @@ func main() {
 RDS支持HTTPS传输协议，您可以通过在创建RDS Client对象时指定的Endpoint中指明HTTPS的方式，在RDS GO SDK中使用HTTPS访问RDS服务：
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/rds"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/rds"
 
 ENDPOINT := "https://rds.bj.baidubce.com" //指明使用HTTPS协议
 AK, SK := <your-access-key-id>, <your-secret-access-key>
@@ -148,7 +148,7 @@ rdsClient, _ := rds.NewClient(AK, SK, ENDPOINT)
 下面一段代码可以让客户端使用代理访问RDS服务：
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/rds"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/rds"
 
 //创建RDS Client对象
 AK, SK := <your-access-key-id>, <your-secret-access-key>
@@ -164,7 +164,7 @@ client.Config.ProxyUrl = "127.0.0.1:8080"
 用户可以通过如下的示例代码进行网络参数的设置：
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/rds"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/rds"
 
 AK, SK := <your-access-key-id>, <your-secret-access-key>
 ENDPOINT := "rds.bj.baidubce.com"
@@ -180,7 +180,7 @@ client.Config.ConnectionTimeoutInMillis = 30 * 1000
 ### 配置生成签名字符串选项
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/rds"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/rds"
 
 AK, SK := <your-access-key-id>, <your-secret-access-key>
 ENDPOINT := "rds.bj.baidubce.com"
@@ -232,7 +232,7 @@ ExpireSeconds | int   | 签名字符串的有效期
 
 使用以下代码可以创建一个RDS主实例
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/rds"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/rds"
 
 args := &rds.CreateRdsArgs{
 	// 指定rds的数据库引擎，取值mysql，sqlserver，postgresql，必选
@@ -299,7 +299,7 @@ for _, e := range result.InstanceIds {
 
 使用以下代码可以创建一个RDS只读实例
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/rds"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/rds"
 
 args := &rds.CreateReadReplicaArgs{
     //主实例ID，必选
@@ -365,7 +365,7 @@ for _, e := range result.InstanceIds {
 
 使用以下代码可以创建一个RDS代理实例
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/rds"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/rds"
 
 args := &rds.CreateRdsProxyArgs{
     //主实例ID，必选
@@ -423,7 +423,7 @@ for _, e := range result.InstanceIds {
 
 使用以下代码可以查询RDS列表。
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/rds"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/rds"
 
 args := &rds.ListRdsArgs{
     // 批量获取列表的查询的起始位置，是一个由系统生成的字符串，可选
@@ -473,7 +473,7 @@ for _, e := range result.Instances {
 
 使用以下代码可以查询指定RDS实例信息。
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/rds"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/rds"
 
 result, err := client.GetDetail(instanceId)
 if err != nil {
@@ -503,7 +503,7 @@ fmt.Println("rds vpcId: ", result.VpcId)
 
 使用以下代码可以删除RDS实例。
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/rds"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/rds"
 
 //多个实例间用英文半角逗号","隔开，最多可输入10个
 if err := client.DeleteRds(instanceIds); err != nil {
@@ -521,7 +521,7 @@ fmt.Printf("delete rds success\n")
 
 使用以下代码可以对RDS实例扩缩容操作。
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/rds"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/rds"
 
 args := &rds.ResizeRdsArgs{
 	// cpu核数
@@ -557,7 +557,7 @@ fmt.Println("resize rds success.")
 使用以下代码可以重启实例。
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/rds"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/rds"
 
 err := client.RebootInstance(instanceId)
 if err != nil {
@@ -571,7 +571,7 @@ if err != nil {
 使用以下代码可以修改RDS实例名称。
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/rds"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/rds"
 
 args := &rds.UpdateInstanceNameArgs{
     InstanceName: "instanceName",
@@ -593,7 +593,7 @@ fmt.Printf("update instance name success\n")
 使用以下代码可以修改RDS实例同步模式。
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/rds"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/rds"
 
 args := &rds.ModifySyncModeArgs{
     //"Async"异步复制，"Semi_sync"半同步复制。
@@ -612,7 +612,7 @@ fmt.Printf("modify syncMode success\n")
 使用以下代码可以修改RDS域名前缀。
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/rds"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/rds"
 
 args := &rds.ModifyEndpointArgs{
     Address: "newAddress",
@@ -634,7 +634,7 @@ fmt.Printf("modify endpoint success\n")
 使用以下代码可以修改RDS域名前缀。
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/rds"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/rds"
 
 args := &rds.ModifyPublicAccessArgs{
     // true or false
@@ -658,7 +658,7 @@ fmt.Printf("modify public access success\n")
 
 使用以下代码可以在某个主实例下创建一个新的账号。
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/rds"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/rds"
 
 args := &rds.CreateAccountArgs{
 	// 账号名称，不能为保留关键字，必选
@@ -701,7 +701,7 @@ fmt.Println("create account success.")
 
 使用以下代码可以查询指定实例的账号列表。
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/rds"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/rds"
 
 result, err := client.ListAccount(instanceId)
 if err != nil {
@@ -723,7 +723,7 @@ for _, e := range result.Accounts {
 
 使用以下代码可以查询特定账号信息。
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/rds"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/rds"
 
 result, err := client.GetAccount(instanceId,accountName)
 if err != nil {
@@ -743,7 +743,7 @@ fmt.Println("rds accountType: ", result.AccountType)
 
 使用以下代码可以删除特定账号信息。
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/rds"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/rds"
 
 result, err := client.DeleteAccount(instanceId,accountName)
 if err != nil {
@@ -760,7 +760,7 @@ fmt.Printf("delete account success\n")
 使用以下代码可以获取一个实例下的备份列表。
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/rds"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/rds"
 args := &rds.GetBackupListArgs{}
 _, err := client.GetBackupList(instanceId, args)
 if err != nil {
@@ -779,7 +779,7 @@ fmt.Printf("get backup list success\n")
 使用以下代码可以获取可用区列表。
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/rds"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/rds"
 err = client.GetZoneList()
 if err != nil {
     fmt.Printf("get zone list error: %+v\n", err)
@@ -794,7 +794,7 @@ fmt.Println("rds instanceId: ", result.InstanceId)
 使用以下代码可以获取一个实例下的子网列表。
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/rds"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/rds"
 args := &rds.ListSubnetsArgs{}
 _, err := client.ListSubnets(args)
 if err != nil {
@@ -844,14 +844,14 @@ if err != nil {
 
 ## SDK日志
 
-RDS GO SDK支持六个级别、三种输出（标准输出、标准错误、文件）、基本格式设置的日志模块，导入路径为`github.com/baidubce/bce-sdk-go/util/log`。输出为文件时支持设置五种日志滚动方式（不滚动、按天、按小时、按分钟、按大小），此时还需设置输出日志文件的目录。
+RDS GO SDK支持六个级别、三种输出（标准输出、标准错误、文件）、基本格式设置的日志模块，导入路径为`github.com/linyuyizhipao/bce-sdk-go/util/log`。输出为文件时支持设置五种日志滚动方式（不滚动、按天、按小时、按分钟、按大小），此时还需设置输出日志文件的目录。
 
 ### 默认日志
 
 RDS GO SDK自身使用包级别的全局日志对象，该对象默认情况下不记录日志，如果需要输出SDK相关日志需要用户自定指定输出方式和级别，详见如下示例：
 
 ```
-// import "github.com/baidubce/bce-sdk-go/util/log"
+// import "github.com/linyuyizhipao/bce-sdk-go/util/log"
 
 // 指定输出到标准错误，输出INFO及以上级别
 log.SetLogHandler(log.STDERR)

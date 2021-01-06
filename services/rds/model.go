@@ -16,7 +16,7 @@
 
 package rds
 
-import "github.com/baidubce/bce-sdk-go/model"
+import "github.com/linyuyizhipao/bce-sdk-go/model"
 
 type CreateRdsArgs struct {
 	ClientToken    string           `json:"-"`

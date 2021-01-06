@@ -21,8 +21,8 @@ import (
 	"encoding/json"
 	"strconv"
 
-	"github.com/baidubce/bce-sdk-go/bce"
-	"github.com/baidubce/bce-sdk-go/http"
+	"github.com/linyuyizhipao/bce-sdk-go/bce"
+	"github.com/linyuyizhipao/bce-sdk-go/http"
 )
 
 // CreateSnapshot - create a snapshot for specified volume

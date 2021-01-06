@@ -21,8 +21,8 @@ import (
 	net_http "net/http"
 	"strings"
 
-	"github.com/baidubce/bce-sdk-go/bce"
-	"github.com/baidubce/bce-sdk-go/http"
+	"github.com/linyuyizhipao/bce-sdk-go/bce"
+	"github.com/linyuyizhipao/bce-sdk-go/http"
 )
 
 const (

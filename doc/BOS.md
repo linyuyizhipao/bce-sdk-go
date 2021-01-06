@@ -38,7 +38,7 @@ BOS Client是BOS服务的客户端，为开发者与BOS服务进行交互提供�
 
 ```go
 import (
-	"github.com/baidubce/bce-sdk-go/services/bos"
+	"github.com/linyuyizhipao/bce-sdk-go/services/bos"
 )
 
 func main() {
@@ -77,9 +77,9 @@ GO SDK实现了STS服务的接口，用户可以参考如下完整代码，实�
 import (
 	"fmt"
 
-	"github.com/baidubce/bce-sdk-go/auth"         //导入认证模块
-	"github.com/baidubce/bce-sdk-go/services/bos" //导入BOS服务模块
-	"github.com/baidubce/bce-sdk-go/services/sts" //导入STS服务模块
+	"github.com/linyuyizhipao/bce-sdk-go/auth"         //导入认证模块
+	"github.com/linyuyizhipao/bce-sdk-go/services/bos" //导入BOS服务模块
+	"github.com/linyuyizhipao/bce-sdk-go/services/sts" //导入STS服务模块
 )
 
 func main() {
@@ -131,7 +131,7 @@ func main() {
 BOS支持HTTPS传输协议，您可以通过在创建BOS Client对象时指定的Endpoint中指明HTTPS的方式，在BOS GO SDK中使用HTTPS访问BOS服务：
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/bos"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/bos"
 
 ENDPOINT := "https://bj.bcebos.com" //指明使用HTTPS协议
 AK, SK := <your-access-key-id>, <your-secret-access-key>
@@ -147,7 +147,7 @@ bosClient, _ := bos.NewClient(AK, SK, ENDPOINT)
 下面一段代码可以让客户端使用代理访问BOS服务：
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/bos"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/bos"
 
 //创建BOS Client对象
 AK, SK := <your-access-key-id>, <your-secret-access-key>
@@ -163,7 +163,7 @@ client.Config.ProxyUrl = "127.0.0.1:8080"
 用户可以通过如下的示例代码进行网络参数的设置：
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/bos"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/bos"
 
 AK, SK := <your-access-key-id>, <your-secret-access-key>
 ENDPOINT := "bj.bcebos.com"
@@ -179,7 +179,7 @@ client.Config.ConnectionTimeoutInMillis = 30 * 1000
 ### 配置生成签名字符串选项
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/bos"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/bos"
 
 AK, SK := <your-access-key-id>, <your-secret-access-key>
 ENDPOINT := "bj.bcebos.com"
@@ -254,8 +254,8 @@ err := bosClient.PutBucketAclFromCanned(bucketName, "private")
 BOS还可以实现设置指定用户对Bucket的访问权限，参考如下代码实现：
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/bce"
-// import "github.com/baidubce/bce-sdk-go/services/bos/api"
+// import "github.com/linyuyizhipao/bce-sdk-go/bce"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/bos/api"
 
 // 1. 直接上传ACL文件流
 aclBodyStream := bce.NewBodyFromFile("<path-to-acl-file>")
@@ -340,7 +340,7 @@ STS的简介及设置临时权限的方式可参见[临时授权访问](https://
 使用BOS GO SDK设置STS临时token权限可参考如下示例：
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/sts"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/sts"
 
 AK, SK := <your-access-key-id>, <your-secret-access-key>
 stsClient, err := sts.NewClient(AK, SK)
@@ -477,7 +477,7 @@ BOS GO SDK提供了丰富的文件上传接口，可以通过以下方式上传�
 BOS在简单上传的场景中，支持以指定文件形式、以数据流方式、以二进制串方式、以字符串方式执行Object上传，请参考如下代码：
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/bce"
+// import "github.com/linyuyizhipao/bce-sdk-go/bce"
 
 // 从本地文件上传
 etag, err := bosClient.PutObjectFromFile(bucketName, objectName, fileName, nil)
@@ -521,7 +521,7 @@ Cache-Control | 指定该Object被下载时的网页的缓存行为 | 无
 参考代码如下：
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/bos/api"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/bos/api"
 
 args := new(api.PutObjectArgs)
 
@@ -547,7 +547,7 @@ etag, err := bosClient.PutObject(bucketName, objectName, bodyStream, args)
 BOS支持用户自定义元数据来对Object进行描述。如下代码所示：
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/bos/api"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/bos/api"
 
 args := new(api.PutObjectArgs)
 
@@ -578,7 +578,7 @@ BOS支持标准存储、低频存储和冷存储，上传Object并存储为低�
 以低频存储为例，代码如下：
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/bos/api"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/bos/api"
 
 args := new(api.PutObjectArgs)
 args.StorageClass = api.STORAGE_CLASS_STANDARD_IA
@@ -594,7 +594,7 @@ etag, err := bosClient.PutObject(bucketName, objectName, bodyStream, args)
 通过AppendObject方式上传示例代码如下：
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/bos/api"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/bos/api"
 
 args := new(api.AppendObjectArgs)
 
@@ -622,7 +622,7 @@ fmt.Println(res.NextAppendOffset) // 打印NextAppendOffset
 BOS支持用户提供的url自动抓取相关内容并保存为指定Bucket的指定名称的Object。
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/bos/api"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/bos/api"
 
 args := new(api.FetchObjectArgs)
 
@@ -658,7 +658,7 @@ BOS GO SDK提供了分块操作的控制参数：
 下面的示例代码设置了分块的大小为20MB，并发数为100：
 
 ```
-// import "github.com/baidubce/bce-sdk-go/services/bos"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/bos"
 
 client := bos.NewClient(<your-ak>, <your-sk>, <endpoint>)
 client.MultipartSize = 20 * (1 << 10)
@@ -685,7 +685,7 @@ fmt.Println(res.UploadId) // 打印初始化分块上传后获取的UploadId
 BOS GO SDK提供的`InitiateMultipartUpload`接口可以设置其他分块上传的相关参数，下面的代码初始化了低频存储的一个分块上传事件：
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/bos/api"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/bos/api"
 
 args := new(api.InitiateMultipartUploadArgs)
 args.StorageClass = api.STORAGE_CLASS_STANDARD_IA
@@ -698,7 +698,7 @@ fmt.Println(res.UploadId) // 打印初始化分块上传后获取的UploadId
 初始化低频存储的一个分块上传事件：
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/bos/api"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/bos/api"
 
 args := new(api.InitiateMultipartUploadArgs)
 args.StorageClass = api.STORAGE_CLASS_COLD
@@ -711,9 +711,9 @@ fmt.Println(res.UploadId) // 打印初始化分块上传后获取的UploadId
 接着，把文件分块上传。
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/bce"
-// import "github.com/baidubce/bce-sdk-go/services/bos"
-// import "github.com/baidubce/bce-sdk-go/services/bos/api"
+// import "github.com/linyuyizhipao/bce-sdk-go/bce"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/bos"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/bos/api"
 
 file, _ := os.Open("/path/to/file.zip")
 
@@ -767,7 +767,7 @@ for i := int64(1); i <= partNum; i++  {
 如下代码所示，完成分块上传：
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/bos/api"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/bos/api"
 
 completeArgs := &api.CompleteMultipartUploadArgs{Parts: partEtags}
 res, _ := bosClient.CompleteMultipartUploadFromStruct(
@@ -1033,7 +1033,7 @@ MaxKeys | 限定此次返回object的最大数，如果不设定，默认为1000
 下面我们分别以几个案例说明通过参数列举的方法：
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/bos/api"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/bos/api"
 
 args := new(api.ListObjectsArgs)
 
@@ -1068,7 +1068,7 @@ listObjectResult, err := bosClient.ListObjects(bucketName, args)
 当用户需要获取Bucket下的所有文件时，可以参考如下代码：
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/bos/api"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/bos/api"
 
 args := new(api.ListObjectsArgs)
 args.Delimiter = "/"
@@ -1080,7 +1080,7 @@ listObjectResult, err := bosClient.ListObjects(bucketName, args)
 可以通过设置 `Prefix` 参数来获取某个目录下所有的文件：
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/bos/api"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/bos/api"
 
 args := new(api.ListObjectsArgs)
 args.Prefix = "fun/"
@@ -1104,7 +1104,7 @@ for _, obj := range listObjectResult.Contents {
 在 `Prefix` 和 `Delimiter` 结合的情况下，可以列出目录下的文件和子目录：
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/bos/api"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/bos/api"
 
 args := new(api.ListObjectsArgs)
 args.Delimiter = "/"
@@ -1176,8 +1176,8 @@ err2 := bosClient.PutObjectAclGrantFullControl(bucket, object, userId)
 用户可参考如下代码设置Bucket内的对象的自定义访问权限，支持四种不同参数：
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/bce"
-// import "github.com/baidubce/bce-sdk-go/services/bos/api"
+// import "github.com/linyuyizhipao/bce-sdk-go/bce"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/bos/api"
 
 // 1. 直接上传ACL文件流
 aclBodyStream := bce.NewBodyFromFile("<path-to-acl-file>")
@@ -1269,7 +1269,7 @@ objects  | 保存要删除的Object信息的容器，包含一个或多个Object
 具体示例如下：
 
 ```
-// import "github.com/baidubce/bce-sdk-go/services/bos/api"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/bos/api"
 
 // 1. 原始接口，提供多个Object的List Stream
 res, err := bosClient.DeleteMultipleObjects(bucket, objectListStream)
@@ -1305,7 +1305,7 @@ res, err := bosClient.DeleteMultipleObjectsFromKeyList(bucket, deleteObjects)
 用户可通过如下操作查看某文件是否存在：
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/bce"
+// import "github.com/linyuyizhipao/bce-sdk-go/bce"
 
 _, err := bosClient.GetObjectMeta(bucketName, objectName)
 if realErr, ok := err.(*bce.BceServiceError); ok {
@@ -1334,7 +1334,7 @@ fmt.Printf("Metadata: %+v\n", res)
 BOS修改Object的Metadata通过拷贝Object实现。即拷贝Object的时候，把目的Bucket设置为源Bucket，目的Object设置为源Object，并设置新的Metadata，通过拷贝自身实现修改Metadata的目的。如果不设置新的Metadata，则报错。这种方式下必须使用拷贝模式为“replace”（默认情况为“copy”）。示例如下：
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/bce"
+// import "github.com/linyuyizhipao/bce-sdk-go/bce"
 
 args := new(api.CopyObjectArgs)
 
@@ -1370,7 +1370,7 @@ fmt.Println("ETag:", res.ETag, "LastModified:", res.LastModified)
 ### 设置拷贝参数拷贝Object
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/bos/api"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/bos/api"
 
 args := new(api.CopyObjectArgs)
 
@@ -1395,7 +1395,7 @@ fmt.Println("ETag:", res.ETag, "LastModified:", res.LastModified)
 对应的示例代码：
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/services/bos/api"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/bos/api"
 
 args := new(api.CopyObjectArgs)
 
@@ -1435,7 +1435,7 @@ fmt.Println("ETag:", res.ETag, "LastModified:", res.LastModified)
 下面提供分块拷贝的详细示例代码，用户可与分块上传的详细说明进行对比，以便于理解：
 
 ```
-// import "github.com/baidubce/bce-sdk-go/services/bos/api"
+// import "github.com/linyuyizhipao/bce-sdk-go/services/bos/api"
 
 // 1. 初始化分块上传，
 initResult, err := bosClient.BasicInitiateMultipartUpload(bucketName, objectKey)
@@ -1530,7 +1530,7 @@ action | 对resource执行的操作动作 | 必填 | -
 可通过如下代码设置一条生命周期规则：
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/bce"
+// import "github.com/linyuyizhipao/bce-sdk-go/bce"
 
 ruleStr := `{
     "rule": [
@@ -1584,7 +1584,7 @@ err := bosClient.DeleteBucketLifecycle(bucketName)
 用户可针对Bucket设置CORS规则，支持通过json字符串、文件、流、对象方式设置：
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/service/bos/api"
+// import "github.com/linyuyizhipao/bce-sdk-go/service/bos/api"
 
 // 1. 通过流式调用接口进行设置
 err := bosClient.PutBucketCors(bucketName, body)
@@ -1654,7 +1654,7 @@ BOS GO SDK支持将用户访问Bucket时的请求记录记录为日志，用户�
 用户通过设置用于放置日志的Bucket和日志文件前缀来开启Bucket日志功能。下面的示例代码可以设置访问日志的位置和前缀：
 
 ```
-// import "github.com/baidubce/bce-sdk-go/bce"
+// import "github.com/linyuyizhipao/bce-sdk-go/bce"
 
 // 1. 从JSON字符串设置
 loggingStr := `{"targetBucket": "logging-bucket", "targetPrefix": "my-log/"}`
@@ -1752,7 +1752,7 @@ err := bosClient.DeleteBucketCopyrightProtection(bucketName)
 用户可通过如下示例代码设置一个Bucket开启静态网站托管的功能：
 
 ```go
-// import "github.com/baidubce/bce-sdk-go/service/bos/api"
+// import "github.com/linyuyizhipao/bce-sdk-go/service/bos/api"
 
 // 1. 通过流式调用接口进行设置
 err := bosClient.PutBucketStaticWebsite(bucketName, body)
@@ -1906,14 +1906,14 @@ if err != nil {
 
 ## SDK日志
 
-BOS GO SDK自行实现了支持六个级别、三种输出（标准输出、标准错误、文件）、基本格式设置的日志模块，导入路径为`github.com/baidubce/bce-sdk-go/util/log`。输出为文件时支持设置五种日志滚动方式（不滚动、按天、按小时、按分钟、按大小），此时还需设置输出日志文件的目录。详见示例代码。
+BOS GO SDK自行实现了支持六个级别、三种输出（标准输出、标准错误、文件）、基本格式设置的日志模块，导入路径为`github.com/linyuyizhipao/bce-sdk-go/util/log`。输出为文件时支持设置五种日志滚动方式（不滚动、按天、按小时、按分钟、按大小），此时还需设置输出日志文件的目录。详见示例代码。
 
 ### 默认日志
 
 BOS GO SDK自身使用包级别的全局日志对象，该对象默认情况下不记录日志，如果需要输出SDK相关日志需要用户自定指定输出方式和级别，详见如下示例：
 
 ```
-// import "github.com/baidubce/bce-sdk-go/util/log"
+// import "github.com/linyuyizhipao/bce-sdk-go/util/log"
 
 // 指定输出到标准错误，输出INFO及以上级别
 log.SetLogHandler(log.STDERR)

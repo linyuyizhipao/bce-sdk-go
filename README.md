@@ -17,7 +17,7 @@ GO SDK可以在go1.3及以上环境下运行。
 使用`go get`工具从github进行下载：
 
 ```shell
-go get github.com/baidubce/bce-sdk-go
+go get github.com/linyuyizhipao/bce-sdk-go
 ```
 
 **SDK目录结构**
@@ -82,7 +82,7 @@ bce-sdk-go
 
 ```go
 import (
-	"github.com/baidubce/bce-sdk-go/services/bos"
+	"github.com/linyuyizhipao/bce-sdk-go/services/bos"
 )
 
 func main() {
@@ -205,7 +205,7 @@ fmt.Println("create bucket success, bucket location:", bucketLocation)
 
 ## SDK日志
 
-GO SDK自行实现了支持六个级别、三种输出（标准输出、标准错误、文件）、基本格式设置的日志模块，导入路径为`github.com/baidubce/bce-sdk-go/util/log`。输出为文件时支持设置五种日志滚动方式（不滚动、按天、按小时、按分钟、按大小），此时还需设置输出日志文件的目录。
+GO SDK自行实现了支持六个级别、三种输出（标准输出、标准错误、文件）、基本格式设置的日志模块，导入路径为`github.com/linyuyizhipao/bce-sdk-go/util/log`。输出为文件时支持设置五种日志滚动方式（不滚动、按天、按小时、按分钟、按大小），此时还需设置输出日志文件的目录。
 
 该日志模块无任何外部依赖，开发者使用GO SDK开发项目，可以直接引用该日志模块自行在项目中使用。可使用GO SDK使用的包级别的日志对象，也可创建新的日志对象，详见如下示例：
 
@@ -226,24 +226,24 @@ myLogger.Info("this is my own logger from the sdk")
 
 产品名称   | 产品缩写 | 导入路径 | 说明文档
 -----------|----------|----------|----------
-应用型负载均衡 | APPBLB | github.com/baidubce/bce-sdk-go/services/appblb | [APPBLB.md](./doc/APPBLB.md)
-物理服务器 | BBC | github.com/baidubce/bce-sdk-go/services/bbc | [BBC.md](./doc/BBC.md)
-云服务器 | BCC | github.com/baidubce/bce-sdk-go/services/bcc | [BCC.md](./doc/BCC.md)
-百度边缘计算 |  BIE   | github.com/baidubce/bce-sdk-go/services/bie |
-负载均衡 | BLB | github.com/baidubce/bce-sdk-go/services/blb | [BLB.md](./doc/BLB.md)
-百度对象存储 |  BOS   | github.com/baidubce/bce-sdk-go/services/bos | [BOS.md](./doc/BOS.md)
-容器引擎 |  CCE   | github.com/baidubce/bce-sdk-go/services/cce | [CCE.md](./doc/CCE.md)
-内容分布网络 |  CDN   | github.com/baidubce/bce-sdk-go/services/cdn | [CDN.md](./doc/CDN.md)
-SSL证书服务 | CERT | github.com/baidubce/bce-sdk-go/services/cert | [CERT.md](./doc/CERT.md)
-函数计算 | CFC | github.com/baidubce/bce-sdk-go/services/cfc | [CFC.md](./doc/CFC.md)
-数据传输服务 | DTS | github.com/baidubce/bce-sdk-go/services/dts | [DTS.md](./doc/DTS.md)
-弹性公网IP | EIP | github.com/baidubce/bce-sdk-go/services/eip | [EIP.md](./doc/EIP.md)
-专线网关 | EtGateway | github.com/baidubce/bce-sdk-go/services/etGateway | [ETGateway.md](./doc/ETGateway.md)
-云数据库 | RDS | github.com/baidubce/bce-sdk-go/services/rds | [RDS.md](./doc/RDS.md)
-分布式缓存服务 | SCS | github.com/baidubce/bce-sdk-go/services/scs | [SCS.md](./doc/SCS.md)
-SMS简单消息服务 | SMS | github.com/baidubce/bce-sdk-go/services/sms | [SMS.md](./doc/SMS.md)
-安全Token服务|  STS   | github.com/baidubce/bce-sdk-go/services/sts | [STS.md](./doc/STS.md)
-视频内容分析 |  VCA   | github.com/baidubce/bce-sdk-go/services/vca |
-视频内容审核 |  VCR   | github.com/baidubce/bce-sdk-go/services/vcr |
-私有网络 | VPC | github.com/baidubce/bce-sdk-go/services/vpc | [VPC.md](./doc/VPC.md)
-VPN网关 | VPN | github.com/baidubce/bce-sdk-go/services/vpn | [VPN.md](./doc/VPN.md)
+应用型负载均衡 | APPBLB | github.com/linyuyizhipao/bce-sdk-go/services/appblb | [APPBLB.md](./doc/APPBLB.md)
+物理服务器 | BBC | github.com/linyuyizhipao/bce-sdk-go/services/bbc | [BBC.md](./doc/BBC.md)
+云服务器 | BCC | github.com/linyuyizhipao/bce-sdk-go/services/bcc | [BCC.md](./doc/BCC.md)
+百度边缘计算 |  BIE   | github.com/linyuyizhipao/bce-sdk-go/services/bie |
+负载均衡 | BLB | github.com/linyuyizhipao/bce-sdk-go/services/blb | [BLB.md](./doc/BLB.md)
+百度对象存储 |  BOS   | github.com/linyuyizhipao/bce-sdk-go/services/bos | [BOS.md](./doc/BOS.md)
+容器引擎 |  CCE   | github.com/linyuyizhipao/bce-sdk-go/services/cce | [CCE.md](./doc/CCE.md)
+内容分布网络 |  CDN   | github.com/linyuyizhipao/bce-sdk-go/services/cdn | [CDN.md](./doc/CDN.md)
+SSL证书服务 | CERT | github.com/linyuyizhipao/bce-sdk-go/services/cert | [CERT.md](./doc/CERT.md)
+函数计算 | CFC | github.com/linyuyizhipao/bce-sdk-go/services/cfc | [CFC.md](./doc/CFC.md)
+数据传输服务 | DTS | github.com/linyuyizhipao/bce-sdk-go/services/dts | [DTS.md](./doc/DTS.md)
+弹性公网IP | EIP | github.com/linyuyizhipao/bce-sdk-go/services/eip | [EIP.md](./doc/EIP.md)
+专线网关 | EtGateway | github.com/linyuyizhipao/bce-sdk-go/services/etGateway | [ETGateway.md](./doc/ETGateway.md)
+云数据库 | RDS | github.com/linyuyizhipao/bce-sdk-go/services/rds | [RDS.md](./doc/RDS.md)
+分布式缓存服务 | SCS | github.com/linyuyizhipao/bce-sdk-go/services/scs | [SCS.md](./doc/SCS.md)
+SMS简单消息服务 | SMS | github.com/linyuyizhipao/bce-sdk-go/services/sms | [SMS.md](./doc/SMS.md)
+安全Token服务|  STS   | github.com/linyuyizhipao/bce-sdk-go/services/sts | [STS.md](./doc/STS.md)
+视频内容分析 |  VCA   | github.com/linyuyizhipao/bce-sdk-go/services/vca |
+视频内容审核 |  VCR   | github.com/linyuyizhipao/bce-sdk-go/services/vcr |
+私有网络 | VPC | github.com/linyuyizhipao/bce-sdk-go/services/vpc | [VPC.md](./doc/VPC.md)
+VPN网关 | VPN | github.com/linyuyizhipao/bce-sdk-go/services/vpn | [VPN.md](./doc/VPN.md)

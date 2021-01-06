@@ -16,7 +16,7 @@
 package eip
 
 import (
-	"github.com/baidubce/bce-sdk-go/model"
+	"github.com/linyuyizhipao/bce-sdk-go/model"
 )
 
 type Reservation struct {

@@ -3,7 +3,7 @@ package scs
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/baidubce/bce-sdk-go/model"
+	"github.com/linyuyizhipao/bce-sdk-go/model"
 	"os"
 	"path/filepath"
 	"reflect"
@@ -13,8 +13,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/baidubce/bce-sdk-go/util"
-	"github.com/baidubce/bce-sdk-go/util/log"
+	"github.com/linyuyizhipao/bce-sdk-go/util"
+	"github.com/linyuyizhipao/bce-sdk-go/util/log"
 )
 
 var (

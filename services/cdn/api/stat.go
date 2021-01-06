@@ -4,7 +4,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/baidubce/bce-sdk-go/bce"
+	"github.com/linyuyizhipao/bce-sdk-go/bce"
 )
 
 const (

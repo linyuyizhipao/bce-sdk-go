@@ -3,8 +3,8 @@ package vpn
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/baidubce/bce-sdk-go/util"
-	"github.com/baidubce/bce-sdk-go/util/log"
+	"github.com/linyuyizhipao/bce-sdk-go/util"
+	"github.com/linyuyizhipao/bce-sdk-go/util/log"
 	"os"
 	"path/filepath"
 	"reflect"

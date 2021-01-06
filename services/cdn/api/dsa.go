@@ -3,7 +3,7 @@ package api
 import (
 	"fmt"
 
-	"github.com/baidubce/bce-sdk-go/bce"
+	"github.com/linyuyizhipao/bce-sdk-go/bce"
 )
 
 // DSARule defined a struct for DSA urls

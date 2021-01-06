@@ -23,8 +23,8 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/baidubce/bce-sdk-go/http"
-	"github.com/baidubce/bce-sdk-go/util"
+	"github.com/linyuyizhipao/bce-sdk-go/http"
+	"github.com/linyuyizhipao/bce-sdk-go/util"
 )
 
 // Body defines the data structure used in BCE request.

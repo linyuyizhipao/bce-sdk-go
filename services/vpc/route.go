@@ -19,8 +19,8 @@ package vpc
 import (
 	"fmt"
 
-	"github.com/baidubce/bce-sdk-go/bce"
-	"github.com/baidubce/bce-sdk-go/http"
+	"github.com/linyuyizhipao/bce-sdk-go/bce"
+	"github.com/linyuyizhipao/bce-sdk-go/http"
 )
 
 // GetRouteTableDetail - get details of the given routeTableId or vpcId

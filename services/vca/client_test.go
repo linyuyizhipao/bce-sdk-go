@@ -1,8 +1,8 @@
 package vca
 
 import (
-	"github.com/baidubce/bce-sdk-go/services/vca/api"
-	"github.com/baidubce/bce-sdk-go/util/log"
+	"github.com/linyuyizhipao/bce-sdk-go/services/vca/api"
+	"github.com/linyuyizhipao/bce-sdk-go/util/log"
 	"testing"
 )
 

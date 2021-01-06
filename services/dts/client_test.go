@@ -2,7 +2,7 @@ package dts
 
 import (
 	"encoding/json"
-	"github.com/baidubce/bce-sdk-go/util/log"
+	"github.com/linyuyizhipao/bce-sdk-go/util/log"
 	"os"
 	"path/filepath"
 	"reflect"

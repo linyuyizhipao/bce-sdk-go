@@ -23,10 +23,10 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/baidubce/bce-sdk-go/auth"
-	"github.com/baidubce/bce-sdk-go/bce"
-	"github.com/baidubce/bce-sdk-go/http"
-	"github.com/baidubce/bce-sdk-go/util"
+	"github.com/linyuyizhipao/bce-sdk-go/auth"
+	"github.com/linyuyizhipao/bce-sdk-go/bce"
+	"github.com/linyuyizhipao/bce-sdk-go/http"
+	"github.com/linyuyizhipao/bce-sdk-go/util"
 )
 
 // PutObject - put the object from the string or the stream

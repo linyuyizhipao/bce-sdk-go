@@ -17,8 +17,8 @@ package dts
 
 import (
 	"fmt"
-	"github.com/baidubce/bce-sdk-go/bce"
-	"github.com/baidubce/bce-sdk-go/http"
+	"github.com/linyuyizhipao/bce-sdk-go/bce"
+	"github.com/linyuyizhipao/bce-sdk-go/http"
 )
 
 // CreateDts - create a dtsTask with the specific parameters

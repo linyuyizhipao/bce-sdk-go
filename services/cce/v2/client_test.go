@@ -10,9 +10,9 @@ import (
 	"testing"
 	"time"
 
-	bccapi "github.com/baidubce/bce-sdk-go/services/bcc/api"
-	"github.com/baidubce/bce-sdk-go/services/cce/v2/types"
-	"github.com/baidubce/bce-sdk-go/util/log"
+	bccapi "github.com/linyuyizhipao/bce-sdk-go/services/bcc/api"
+	"github.com/linyuyizhipao/bce-sdk-go/services/cce/v2/types"
+	"github.com/linyuyizhipao/bce-sdk-go/util/log"
 )
 
 var (
